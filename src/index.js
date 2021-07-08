@@ -37,7 +37,7 @@ function pause(){
 }
 
 function play(){
-  interval = setInterval(moveSnake,100);
+  interval = setInterval(moveSnake,110);
   started = true;
 }
 
@@ -89,7 +89,7 @@ function drawSnake() {
     pU = this.powerUp;
     if (pU === 1 && this.powerUpCount === 0) {
       clearInterval(interval);
-      interval = setInterval(moveSnake, 70);
+      interval = setInterval(moveSnake, 90);
     } else if (pU === 2 && this.powerUpCount === 0) {
       this.invinsibleArray = [];
     } else if (pU === 3 && this.powerUpCount === 0) {
@@ -100,7 +100,7 @@ function drawSnake() {
     }
     if (this.powerUpCount >= 225) {
       clearInterval(interval)
-      interval = setInterval(moveSnake, 100);
+      interval = setInterval(moveSnake, 110);
       this.powerUp = 0;
       this.powerUpCount = 0;
       this.count = 0;
