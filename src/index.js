@@ -60,7 +60,7 @@ function drawSnake() {
   } else {
     ctx.fillStyle = "rgb(0,102,0)";
   }
-  ctx.fillRect(currentPosition['x'], currentPosition['y'], gridSize - 1, gridSize - 1);
+  ctx.fillRect(currentPosition['x'] + 1 , currentPosition['y'] + 1, gridSize - 2, gridSize - 2);
   if (snakeBody.length > snakeLength) {
     itemToRemove = snakeBody.shift();
     var index = this.invinsibleArray.indexOf(itemToRemove.toString());
@@ -175,7 +175,7 @@ function makeFoodItem(){
     makeFoodItem();
   } else {
     ctx.fillStyle = "rgb(255,51,51)";
-    ctx.fillRect(suggestedPoint[0], suggestedPoint[1], gridSize - 2, gridSize - 2);
+    ctx.fillRect(suggestedPoint[0] + 2, suggestedPoint[1] + 2, gridSize - 4, gridSize - 4);
   };
 }
 
@@ -185,7 +185,7 @@ function spawnPowerUp(){
     spawnPowerUp();
   } else {
     ctx.fillStyle = "rgb(192,192,192)";
-    ctx.fillRect(powerUpPoint[0], powerUpPoint[1], gridSize - 3, gridSize - 3);
+    ctx.fillRect(powerUpPoint[0] + 3, powerUpPoint[1] + 3, gridSize - 6, gridSize - 6);
   };
 }
 
@@ -202,7 +202,7 @@ function hasEatenItself(element, index, array) {
 }
 
 function gameOver(){
-  var score = (snakeLength - 3)*100;
+  var score = (snakeLength - 3)*25;
   pause();
   alert("Game Over. Your score was "+ score);
   ctx.clearRect(0,0, canvas.width, canvas.height);
