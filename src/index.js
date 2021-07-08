@@ -233,24 +233,28 @@ document.onkeydown = function(event) {
         play();
       }
     case 37:
+    case 65:
       if (direction != "right" && started != false){
         moveLeft();
       }
       break;
      
     case 38:
+    case 87:
       if (direction != "down" && started != false){
         moveUp();
       }
       break; 
       
     case 39:
+    case 68:
       if (direction != "left" && started != false){
         moveRight();
       }
       break; 
     
     case 40:
+    case 83:
       if (direction != "up" && started != false){
         moveDown();
       }
