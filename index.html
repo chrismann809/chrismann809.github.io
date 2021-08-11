@@ -6,9 +6,24 @@
     <script src='./src/index.js' type='text/javascript'></script>
   </head>
   <body onload="load();">
-    <img id="logo" src="src/images/super_snake_logo.png" alt="">
     <img id="background" src="src/images/background.jpg" alt="">
-    <canvas id="canvas" width="800" height="600"></canvas>
+    <img id="logo" src="src/images/super_snake_logo.png" alt="">
+    <div class="content">
+      <div id="start-screen">
+        <div id="start-text">
+          <h2>Welcome to Super Snake!</h2>
+          <p>Use the arrow keys or WASD to move. Collect food pellets to grow and increase your score.</p> 
+          <p>Grab power ups to enhance your snake for a brief period</p>
+          <h3>Power Ups</h3>
+          <div id="blue"><div>- Slows snake down.</div></div>
+          <div id="pink"><div>- Speeds snake up.</div></div>
+          <div id="gold"><div>- Allows snake to move through itself.</div></div>
+          <div id="green"><div>- Doubles growth from food.</div></div>
+          <h2 id="space">Press [Space] to begin!</h2>
+        </div>
+      </div>
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
     <p id="score"></p>
   </body>
 </html>

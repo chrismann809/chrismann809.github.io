@@ -208,6 +208,7 @@ function gameOver(){
   ctx.clearRect(0,0, canvas.width, canvas.height);
   started = false;
   restart();
+  document.getElementById("start-screen").style.display = "block";
 }
 
 function updateScore(){
@@ -230,6 +231,7 @@ document.onkeydown = function(event) {
   {
     case 32:
       if (started === false) {
+        document.getElementById("start-screen").style.display = "none";
         play();
       }
     case 37:
